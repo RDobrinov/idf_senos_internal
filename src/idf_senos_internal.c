@@ -45,7 +45,7 @@ void intr_get_full_chip_info(full_chip_info_t *fi) {
         uint8_t efuse_uuid[16];
         esp_efuse_read_field_blob(ESP_EFUSE_OPTIONAL_UNIQUE_ID, efuse_uuid, sizeof(efuse_uuid) * 8);
         fi->uuid = XXH64(efuse_uuid, sizeof(efuse_uuid), *((uint64_t *)&seed));
-    #elif 
+    #else
         fi->uuid = XXH64(&chip, sizeof(chip), *((uint64_t *)&seed));
     #endif
 
