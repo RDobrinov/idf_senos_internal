@@ -13,9 +13,7 @@
 #include "idf_senos_internal.h"
 #include "hal/efuse_ll.h"
 #include "hal/efuse_hal.h"
-//#include "efuse.h"
 #include "esp_efuse_table.h"
-/** */
 
 #include "xxhash.h"
 
